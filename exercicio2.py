@@ -1,10 +1,5 @@
-quantidade = int(input("quantos alunos? "))
-contador = 1
+contador = 2
 
-while contador <= quantidade:
-    nome = input("Digite o nome do aluno: ")
-    print("Aluno cadastrado:", nome)
-    contador = contador + 1
-
-#teste 2
-
+while contador <= 20:
+ print(contador)
+ contador = contador +2
