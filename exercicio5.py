@@ -9,7 +9,7 @@ while opcao != 3:
     print("2 - Listar livros")
     print("3 - Sair")
 
-    opcao = int(input("Escolha uma opção: "))
+    opcao = input("Escolha uma opção: ")
 
     if opcao == 1:
 
