@@ -1,6 +1,6 @@
 st_biblioteca = []
 
-def calcular_total (preco, quantidade):
+def calcular_total(preco, quantidade):
     total = preco * quantidade
     return total
 
@@ -9,7 +9,7 @@ def cadastro_livros():
     quantidade = int(input("\nQuantos livros deseja cadastrar? "))
 
     for i in range (1, quantidade +1):
-        print(f"--- CADASTRO DO LIVRO {i}"  "---")
+        print(f"\n--- CADASTRO DO LIVRO {i}"  "---")
         titulo = input("Digite o nome do livro: ")
         autor = input("digite o nome do autor: ")
         preco = float(input(" Insira o preço do livro: \nR$ "))
@@ -22,6 +22,7 @@ def cadastro_livros():
         print("\nLivro cadastrado com sucesso!")
 
         
+    # elif opcao == "2":
 def listagem_lv():
     print("Livros armazenados ao nosso sistema: ")
     if not st_biblioteca:
@@ -50,7 +51,7 @@ def buscar_livros():
             print(f"titulo{livro_st[0]}")
             print(f"autor{livro_st[1]}")
             print(f"quantidade{livro_st[2]}")
-            procuro = True
+            encontrado = True
 
     if not procuro:
         print("nenhum livro foi encontrado.....")
@@ -61,7 +62,7 @@ def remoção_livros():
     pesquisa_remocao = input("livro a ser removido: ")
     procuro = False
     for livros_st in st_biblioteca:
-        if pesquisa_remocao in st_biblioteca[0].remove(livros_st):
+        if pesquisa_remocao in livros_st[0].remove():
             print("livro apagado!{livro_st[0]}")
 
     if not procuro:
@@ -72,11 +73,12 @@ def menu():
     while True:
 
         print("\n===== BIBLIOTECA =====")
-        print("1 - Cadastrar livro")
+        print("1 - \nCadastrar livro")
         print("2 - Listar livros")
         print("3 - pesquisar livro")
         print("4 - remoção de livro")
-        print("5 - SAIR")
+        print("5 - calculo de livros")
+        print("6 - Sair\n")
 
         opcao = input ("escolha a opcao: ")
         if opcao== "1":
@@ -90,9 +92,5 @@ def menu():
 
         elif opcao== "5":
             print("\n saindo do programa....")
-            break
-
         else:
             print("opcao escolhida invalida! ")
-
-menu()
